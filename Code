@@ -1,27 +1,24 @@
+using System;
 public class FindNextNumber
 {
-public int GetNextNumber(int,int[])
+public int GetNextNumber(int arrLen,int[] Array)
 {
 int nextValue=0;
-for(int i=1; i=int, i++)
+for(int i=1; i<=arrLen-1; i++)
 {
-int[i]=int[i]+int[i-1];
-nextValue==int[i];
-if i=int;
+if (i==arrLen-1)
+{
+	nextValue=Array[i]+Array[i-1];
 break;
+}
 }
 return nextValue;
 }
-public static int main(string[] args)
+public static void Main()
 {
-int nextValue=FindNextNumber.GetNextNumber(6,{0,1, 1, 2, 3, 5});
-Console.WriteLine("Next number in series is :"+nextValue);
-}
-}
-
-public static int Main(string[] args)
-{
-int nextValue=FindNextNumber.GetNextNumber(6,{0,1, 1, 2, 3, 5});
+FindNextNumber obj=new FindNextNumber();
+int[] Array=new int[] {0,1, 1, 2, 3, 5};	
+int nextValue=obj.GetNextNumber(6,Array);	
 Console.WriteLine("Next number in series is :"+nextValue);
 }
 }
